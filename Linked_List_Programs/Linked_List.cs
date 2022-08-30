@@ -89,6 +89,26 @@ namespace Linked_List_Programs
             }
         }
 
+        internal Node PopLastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty LinkedList");
+                return null;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Node PopLastNode = temp.next;
+                temp.next = null;
+                return PopLastNode;
+            }
+        }
+
         internal void Display()
         {
             if (head == null)

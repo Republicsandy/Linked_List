@@ -15,11 +15,9 @@ namespace Linked_List_Programs
             list.Add(70);
             list.Add(30);
             list.Add(56);
-            list.Display();
-            //calling pop function
-            Node p = list.Pop();
-            Console.WriteLine(p.data);
-            //linkedlist sequence = 56->30->70
+            //popping last element from the list
+            list.PopLastNode();
+            //linkedlist sequence = 56->30
             list.Display();
         }
     }
