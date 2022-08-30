@@ -14,8 +14,10 @@ namespace Linked_List_Programs
             //adding items to the list
             list.Add(56);
             //appending items to the list
-            list.Append(30);
             list.Append(70);
+            //inserting item to the list at 2nd position
+            list.Insert(2, 30);
+            list.Insert(4, 80);
             //linkedlist sequence = 56->30->70
             list.Display();
         }
