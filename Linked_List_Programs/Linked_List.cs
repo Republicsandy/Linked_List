@@ -109,6 +109,23 @@ namespace Linked_List_Programs
             }
         }
 
+        public bool Search(int item)
+        {
+            if (head == null)
+                return false;
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == item)
+                        return true;
+                    temp = temp.next;
+                }
+                return false;
+            }
+        }
+
         internal void Display()
         {
             if (head == null)
