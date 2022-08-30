@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace Linked_List_Programs
@@ -7,11 +8,15 @@ namespace Linked_List_Programs
     {
         static void Main(string[] args)
         {
-            Node head = new Node(56);
-            ////new node will have reference of head's next reference
-            head.next = new Node(30);
-            //and now head will refer to new node
-            head.next.next = new Node(70);
+            Console.WriteLine("Hello, Welcome to Linked List!");
+            //creating a list
+            Linked_List list = new Linked_List();
+            //adding items to the list
+            list.Add(70);
+            list.Add(30);
+            list.Add(56);
+            //linkedlist sequence = 56->30->70
+            list.Display();
         }
     }
 }

@@ -8,10 +8,41 @@ namespace Linked_List_Programs
 {
     public class Linked_List
     {
-        Node head;
+       internal Node head;
         public Linked_List()
         {
             this.head = null;
+        }
+
+        internal void Add(int item)
+        {
+            Node node = new Node(item);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                node.next = head;
+                head = node;
+            }
+        }
+        internal void Display()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty");
+                return;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    Console.Write(temp.data + " ");
+                    temp = temp.next;
+                }
+            }
         }
     }
 }
