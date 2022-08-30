@@ -126,6 +126,45 @@ namespace Linked_List_Programs
             }
         }
 
+        public int Size()
+        {
+            int size = 0;
+            Node n = head;
+            if (head == null)
+            {
+                Console.WriteLine($"Linked List is Empty, Size is {size}");
+            }
+            else
+            {
+                size = 1;
+                while (n.next != null)
+                {
+                    n = n.next;
+                    size++;
+                }
+                Console.WriteLine($"Linked List Size is {size}");
+            }
+            return size;
+        }
+
+        public void Delete(int item)
+        {
+            Node temp = head, previous = null;
+            if (temp != null && temp.data == item)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != item)
+            {
+                previous = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            previous.next = temp.next;
+        }
+
         internal void Display()
         {
             if (head == null)
