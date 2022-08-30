@@ -12,9 +12,10 @@ namespace Linked_List_Programs
             //creating a list
             Linked_List list = new Linked_List();
             //adding items to the list
-            list.Add(70);
-            list.Add(30);
             list.Add(56);
+            //appending items to the list
+            list.Append(30);
+            list.Append(70);
             //linkedlist sequence = 56->30->70
             list.Display();
         }
