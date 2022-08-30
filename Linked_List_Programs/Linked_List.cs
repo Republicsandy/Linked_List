@@ -74,6 +74,21 @@ namespace Linked_List_Programs
             }
         }
 
+        internal Node Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty");
+                return null;
+            }
+            else
+            {
+                Node popped = head;
+                head = head.next;
+                return popped;
+            }
+        }
+
         internal void Display()
         {
             if (head == null)

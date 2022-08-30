@@ -12,12 +12,13 @@ namespace Linked_List_Programs
             //creating a list
             Linked_List list = new Linked_List();
             //adding items to the list
+            list.Add(70);
+            list.Add(30);
             list.Add(56);
-            //appending items to the list
-            list.Append(70);
-            //inserting item to the list at 2nd position
-            list.Insert(2, 30);
-            list.Insert(4, 80);
+            list.Display();
+            //calling pop function
+            Node p = list.Pop();
+            Console.WriteLine(p.data);
             //linkedlist sequence = 56->30->70
             list.Display();
         }
